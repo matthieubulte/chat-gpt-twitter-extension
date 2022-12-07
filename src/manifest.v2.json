@@ -1,7 +1,7 @@
 {
-  "name": "ChatGPT for Google",
-  "description": "Display ChatGPT response alongside Google Search results",
-  "version": "1.2.0",
+  "name": "ChatGPT for Twitter",
+  "description": "Have ChatGPT help you improve your tweets",
+  "version": "1.0.0",
   "manifest_version": 2,
   "icons": {
     "16": "logo.png",
@@ -15,8 +15,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*/search*"],
-      "include_globs": ["*.google.*/*"],
+      "matches": ["https://twitter.com/*"],
       "js": ["content-script/index.js"],
       "css": ["github-markdown.css", "styles.css"]
     }

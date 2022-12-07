@@ -1,4 +1,4 @@
-.chat-gpt-container {
+/* .chat-gpt-container {
   margin-bottom: 30px;
   border-radius: 8px;
   border: 1px solid #dadce0;
@@ -48,4 +48,71 @@
 .chat-gpt-container #answer code {
   white-space: pre-wrap;
   word-break: break-all;
+} */
+
+.gpt-check-result-class {
+  background-color: rgb(247,255,245);
+  display: block;
+  position: absolute;
+  border: 2px solid rgb(74,161,29);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'TwitterChirp';
+}
+
+.gpt-check-button {
+  font-weight: bold;
+  font-family: 'TwitterChirp';
+  color: rgb(74,161,29);
+  border: solid 2px;
+  border-radius: 1em;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.gpt-check-button[gpt-check-loading] {
+  cursor: default;
+}
+
+.gpt-check-button:hover {
+  color: white;
+  background-color: rgb(74,161,29);
+}
+
+.gpt-check-button[gpt-check-loading]:hover {
+  color: rgb(74,161,29);
+  background-color: white;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner {
+  content: '';
+  box-sizing: border-box;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(247,255,245);
+  border-top-color: rgb(74,161,29);
+  animation: spinner .6s linear infinite;
+}
+
+.gpt-check-out-controls {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.gpt-check-out-controls span {
+  cursor: pointer;
+  margin-left: 1em;
+  text-decoration: underline;
 }
